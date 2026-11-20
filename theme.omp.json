@@ -1,32 +1,48 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-    "black": "#1F1F1F",
-    "darkGray": "#181818",
-    "white": "#CCCCCC",
-    "blue": "#0078D4",
-    "green": "#2EA043",
-    "yellow": "#DCDCAA",
-    "cyan": "#4EC9B0",
-    "lightMagenta": "#C586C0",
-    "lightRed": "#F85149",
-    "lightCyan": "#9CDCFE",
-    "lightYellow": "#DCDCAA"
+    "background": "#1E1E1E",
+    "foreground": "#D4D4D4",
+    "black": "#1E1E1E",
+    "red": "#F14C4C",
+    "green": "#23D18B",
+    "yellow": "#F5F543",
+    "blue": "#3B8EEA",
+    "magenta": "#D670D6",
+    "cyan": "#29B8DB",
+    "white": "#D4D4D4",
+    "brightBlack": "#666666",
+    "brightRed": "#F14C4C",
+    "brightGreen": "#23D18B",
+    "brightYellow": "#FFCC00",
+    "brightBlue": "#4FC1FF",
+    "brightMagenta": "#C586C0",
+    "brightCyan": "#4EC9B0",
+    "brightWhite": "#FFFFFF",
+    "comment": "#6A9955",
+    "string": "#CE9178",
+    "keyword": "#569CD6",
+    "function": "#DCDCAA",
+    "variable": "#9CDCFE",
+    "type": "#4EC9B0",
+    "warning": "#CCA700",
+    "error": "#F44747",
+    "success": "#4EC9B0"
   },
   "blocks": [
     {
       "alignment": "left",
       "segments": [
         {
-          "background": "p:darkGray",
-          "foreground": "p:white",
+          "background": "p:background",
+          "foreground": "p:foreground",
           "style": "powerline",
           "template": "{{ if .WSL }}WSL at{{ end }} {{.Icon}} ",
           "type": "os"
         },
         {
           "background": "p:blue",
-          "foreground": "#FFFFFF",
+          "foreground": "p:brightWhite",
           "powerline_symbol": "\ue0b0",
           "options": {
             "style": "full"
@@ -39,9 +55,9 @@
           "background": "p:green",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:yellow{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:lightRed{{ end }}",
-            "{{ if gt .Ahead 0 }}p:lightMagenta{{ end }}",
-            "{{ if gt .Behind 0 }}p:lightMagenta{{ end }}"
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:brightRed{{ end }}",
+            "{{ if gt .Ahead 0 }}p:brightMagenta{{ end }}",
+            "{{ if gt .Behind 0 }}p:brightMagenta{{ end }}"
           ],
           "foreground": "p:black",
           "leading_diamond": "\ue0b6",
@@ -65,7 +81,7 @@
           "type": "go"
         },
         {
-          "background": "p:lightMagenta",
+          "background": "p:brightMagenta",
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
@@ -73,7 +89,7 @@
           "type": "julia"
         },
         {
-          "background": "p:lightCyan",
+          "background": "p:variable",
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
           "options": {
@@ -85,7 +101,7 @@
           "type": "python"
         },
         {
-          "background": "p:lightRed",
+          "background": "p:brightRed",
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
           "options": {
@@ -96,7 +112,7 @@
           "type": "ruby"
         },
         {
-          "background": "p:lightYellow",
+          "background": "p:brightYellow",
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
           "options": {
@@ -109,7 +125,7 @@
         {
           "background_templates": [
             "{{if contains \"default\" .Profile}}p:yellow{{end}}",
-            "{{if contains \"jan\" .Profile}}p:lightRed{{end}}"
+            "{{if contains \"jan\" .Profile}}p:brightRed{{end}}"
           ],
           "foreground": "p:black",
           "powerline_symbol": "\ue0b0",
