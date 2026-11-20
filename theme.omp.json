@@ -2,15 +2,15 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
     "black": "#1F1F1F",
-    "darkGray": "#545454",
-    "white": "#D4D4D4",
-    "blue": "#569CD6",
-    "green": "#6A9955",
+    "darkGray": "#181818",
+    "white": "#CCCCCC",
+    "blue": "#0078D4",
+    "green": "#2EA043",
     "yellow": "#DCDCAA",
-    "cyan": "#56B6C2",
+    "cyan": "#4EC9B0",
     "lightMagenta": "#C586C0",
-    "lightRed": "#F44747",
-    "lightCyan": "#56B6C2",
+    "lightRed": "#F85149",
+    "lightCyan": "#9CDCFE",
     "lightYellow": "#DCDCAA"
   },
   "blocks": [
@@ -26,7 +26,7 @@
         },
         {
           "background": "p:blue",
-          "foreground": "p:black",
+          "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "options": {
             "style": "full"
